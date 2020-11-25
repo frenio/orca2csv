@@ -1,3 +1,7 @@
+#!/usr/bin/env python
+
+"""thermodata_orca_to_csv.py: Extracts thermochemistry data from an Orca output and writes them into a csv file."""
+
 import os
 import sys
 import re
