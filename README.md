@@ -4,7 +4,7 @@ A collection of python scripts that extract data from Orca (a quantum chemistry 
 ## thermodata_orca_to_csv.py
 Apart from functions to extract thermochemistry data the script also contains functions to extract vibrational frequencies from an Orca output file. If used as "\_\_main\_\_" use as follows:
 
-$ python thermodata_orca_to_csv.py <filename.out> <path_to_directory> <temperature>
+    $ python thermodata_orca_to_csv.py <filename.out> <path_to_directory> <temperature>
 
 The script looks for all files with the name "filename.out" in "path_to_directory", extracts the data that was calculated at the specified "temperature" (in K), and creates a csv that contains the extracted data. One row for each file.
 
