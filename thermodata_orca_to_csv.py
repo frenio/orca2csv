@@ -127,15 +127,23 @@ def check_minimum(path_to_file):
     return is_minimum
 
 def extract_electronic_energy(path_to_file):
-    """Returns a float - the electronic energy of the molecule."""
+    """Returns a float - the electronic energy of the atom or molecule."""
     with open(path_to_file, 'r') as f:
         read_data = f.read()
-    try:
-        elec_en = re.search("Electronic energy\s+\.\.\.\s+(\-\d+\.\d+)", read_data).group(1)
-        elec_en = float(elec_en)
-    except:
-        print("Warning: Electronic energy not found.")
-        elec_en = None
+    if "Single Point Calculation" in read_data:
+        try:
+            elec_en = re.search("FINAL SINGLE POINT ENERGY\s+(\-\d+\.\d+)", read_data).group(1)
+            elec_en = float(elec_en)
+        except:
+            print("Warning: Electronic energy not found.")
+            elec_en = None
+    else:    
+        try:
+            elec_en = re.search("Electronic energy\s+\.\.\.\s+(\-\d+\.\d+)", read_data).group(1)
+            elec_en = float(elec_en)
+        except:
+            print("Warning: Electronic energy not found.")
+            elec_en = None
     return elec_en
 
 def extract_zero_point_energy(path_to_file):
@@ -269,6 +277,7 @@ def convert_data_to_csv(data_list, csv_file = 'thermodata.csv'):
             writer.writeheader()
             for data in data_list:
                 writer.writerow(data)
+
 
 
 if __name__ == "__main__":
