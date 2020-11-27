@@ -271,7 +271,6 @@ def convert_data_to_csv(data_list, csv_file = 'thermodata.csv'):
                 writer.writerow(data)
 
 
-
 if __name__ == "__main__":
     filename = sys.argv[1]
     path = sys.argv[2]
