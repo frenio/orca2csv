@@ -4,7 +4,7 @@ A collection of python scripts that extract data from Orca* output files and wri
 \* a quantum chemistry program package
 
 ## thermodata_orca_to_csv.py
-Extracts the description, method, basis set, charge, multiplicity, electronic energy, zero point energy, U, H, S, G, and the Orca version from an Orca output file and writes the information into a csv file. The script also checks whether the calculation yielded a minimum structure or not.
+Extracts the description, method, basis set, charge, multiplicity, electronic energy, zero point energy, U, H, S, G, and the Orca version from an Orca output file and writes the information into a csv file. The script also checks whether a calculation yielded a minimum structure or not.
 
 Use as follows:
 
