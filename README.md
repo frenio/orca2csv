@@ -1,7 +1,5 @@
 # orca2csv
-A collection of python scripts that extract data from Orca* output files and write the data into a csv file. The python scripts are meant to help chemists extract and analyze computational data that is relevant to them.
-
-\* a quantum chemistry program package
+A collection of python scripts that extract data from [Orca](https://orcaforum.kofo.mpg.de/app.php/portal) output files and write the data into a csv file. The python scripts are meant to help chemists extract and analyze computational data that is relevant to them.
 
 ## thermodata_orca2csv.py
 Extracts the description, method, basis set, charge, multiplicity, electronic energy, zero point energy, U, H, S, G, and the Orca version from an Orca output file and writes the information into a csv file. The script also checks whether a calculation yielded a minimum structure or not.
